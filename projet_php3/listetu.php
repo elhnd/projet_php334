@@ -46,10 +46,15 @@
             $line1 = fgets($etu);
             $col1 = explode(";",$line1);
             echo "<tr>";
-            
-                for($i=0; $i<count($col1); $i++){
-                    if($col1[6]==$recher){
-                        echo "<td>".$col1[$i]."</td>";
+                if($col1[6]==$recher){
+                    if($col1[7]=='inscrit'){
+                        echo "<td>".$col1[0]."</td>";
+                        echo "<td>".$col1[1]."</td>";
+                        echo "<td>".$col1[2]."</td>";
+                        echo "<td>".$col1[3]."</td>";
+                        echo "<td>".$col1[4]."</td>";
+                        echo "<td>".$col1[5]."</td>";
+                        echo "<td>".$col1[6]."</td>";
                     }
                 }
             echo "</tr>";
